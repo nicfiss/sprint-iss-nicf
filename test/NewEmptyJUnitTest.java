@@ -4,36 +4,43 @@
  * and open the template in the editor.
  */
 
-/**
- *
- * @author issuser
- */
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
 import static org.junit.Assert.*;
-import sprint.doList;
 import sprint.Item;
+import sprint.doList;
+
 /**
  *
  * @author issuser
  */
-public class testCases {
-//    	public testCases(String name) {
-//		super(name);
-//	}
-//    
-  
+public class NewEmptyJUnitTest {
+    
+    public NewEmptyJUnitTest() {
+    }
+    
+    @BeforeClass
+    public static void setUpClass() {
+    }
+    
+    @AfterClass
+    public static void tearDownClass() {
+    }
+    
+    @Before
+    public void setUp() {
+    }
+    
+    @After
+    public void tearDown() {
+    }
+
+    // TODO add test methods here.
+    // The methods must be annotated with annotation @Test. For example:
+    //
     @Test
     public void TestAddItemToList(){
         //setup
@@ -173,15 +180,4 @@ public class testCases {
         dolist.CompleteItemInList(itemnum,1);
         assertTrue(dolist.item.get(itemnum).Status == 1);
     }
-//    	public static junit.framework.Test suite() {
-//		TestSuite suite = new TestSuite("Test for default package");
-//		System.out.println ("Test for default package");
-//		//$JUnit-BEGIN$
-//		suite.addTestSuite(testCases.class);
-//		//$JUnit-END$
-//		return suite;
-//	}
-//        
-
 }
-
