@@ -70,4 +70,12 @@
     nbproject/build-impl.xml file. 
 
     -->
+    <target name="testCases">
+<mkdir dir="${junit.output.dir}"/>
+<junit printsummary="withOutAndErr" fork="yes">
+<formatter type="xml"/>
+<test name="test.testCases" todir="${junit.output.dir}"/>
+<classpath refid="Sprint.classpath"/>
+</junit>
+</target>
 </project>

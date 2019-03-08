@@ -14,11 +14,13 @@
  * and open the template in the editor.
  */
 
-//import org.junit.After;
-//import org.junit.AfterClass;
-//import org.junit.Before;
-//import org.junit.BeforeClass;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
 import static org.junit.Assert.*;
 import sprint.doList;
 import sprint.Item;
@@ -26,8 +28,10 @@ import sprint.Item;
  *
  * @author issuser
  */
-public class testCases {
-    
+public class testCases extends TestCase {
+    	public testCases(String name) {
+		super(name);
+	}
     
   
     @Test
@@ -167,9 +171,17 @@ public class testCases {
 
         int itemnum = 1;
         dolist.CompleteItemInList(itemnum,1);
-        assertTrue(dolist.item.get(itemnum).Status == 1); 
+        assertTrue(dolist.item.get(itemnum).Status == 1);
     }
-    
+    	public static junit.framework.Test suite() {
+		TestSuite suite = new TestSuite("Test for default package");
+		System.out.println ("Test for default package");
+		//$JUnit-BEGIN$
+		suite.addTestSuite(testCases.class);
+		//$JUnit-END$
+		return suite;
+	}
+        
 
 }
 
